@@ -139,4 +139,3 @@ cv2.imwrite("MetricRectifiedImage.jpg", MetricRect)
 while cv2.waitKey(0) != 27:
     pass
 cv2.destroyAllWindows()
-cv2.waitKey(1)
