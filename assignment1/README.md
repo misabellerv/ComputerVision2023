@@ -40,6 +40,6 @@ Next, we select four non-collinear points in the distorted images, which corresp
 
 ## Let's Connect! 🤝
 
-If you have any questions or need further assistance with the code or the concepts involved, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/yourname). Enjoy exploring projections, homographies, and perspective correction in Computer Vision!
+If you have any questions or need further assistance with the code or the concepts involved, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/misabellerv). Enjoy exploring projections, homographies, and perspective correction in Computer Vision!
 
 Happy coding! 📐🔍🌇🚀
