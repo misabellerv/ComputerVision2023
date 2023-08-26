@@ -43,4 +43,4 @@ def RANSAC(N, threshold, matches, kp1, kp2):
         if len(inliers) > len(best_inliers):
             best_H = H
             best_inliers = inliers
-        return best_H, errors
+    return best_H, errors
