@@ -22,7 +22,7 @@ def RANSAC(N, threshold, matches, kp1, kp2):
         dst_pts = np.float32([kp2[m.trainIdx].pt for m in random_matches]).reshape(-1, 1, 2)
         
         # Homography 
-        H, _ = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC)
+        H, _ = cv2.findHomography(src_pts, dst_pts)
         
         inliers = []
         
@@ -43,4 +43,10 @@ def RANSAC(N, threshold, matches, kp1, kp2):
         if len(inliers) > len(best_inliers):
             best_H = H
             best_inliers = inliers
-    return best_H, errors
+
+        src_in = np.float32([kp1[m.queryIdx].pt for m in best_inliers]).reshape(-1, 1, 2)
+        dst_in = np.float32([kp2[m.trainIdx].pt for m in best_inliers]).reshape(-1, 1, 2)
+
+        final_H, _ = cv2.findHomography(src_in,dst_in)
+        
+    return final_H, errors
